@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- ファビコン -->
+  <link rel="icon" href="https://pingu-pest.github.io/HP-icon/favicon.ico" type="image/x-icon">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://pingu-pest.github.io/HP-icon/apple-touch-icon-180x180.png">
+  <!-- Android用アイコン -->
+  <link rel="icon" sizes="192x192" href="https://pingu-pest.github.io/HP-icon/android-chrome-192x192.png">
+  <!-- Windows用アイコン -->
+  <meta name="msapplication-TileImage" content="https://pingu-pest.github.io/HP-icon/mstile-144x144.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home page for pest!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+<body>
+  <section class="hero is-primary">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="https://pingu-pest.github.io/HP-icon/pest.png" alt="Logo"/>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body has-text-centered">
+    <p class="title">ペストのHPはただいまメンテナンス中です</p>
+    <p class="subtitle">メンテナンス終了までお待ち下さい。</p>
+    <progress class="progress is-info"></progress>
+    </div>
+  </section>
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div id="app" class="container">
+        <a class="button is-danger is-medium is-fullwidth" v-on:click="song">更新</a>
+      </div>
+    </div>
+  </section>
+  <section class="hero is-small">
+    <div class="hero-body">
+      <a class="button is-link is-medium is-fullwidth" href="https://forms.gle/FSjB9cExbmVUgUt58">リクエスト</a>
+    </div>
+  </section>
+  <section class="hero is-small">
+    <div class="hero-body">
+      <a class="button is-warning is-medium is-fullwidth" href="https://pingu-pest.github.io/HP-file/食.pdf">今月の献立表</a>
+    </div>
+  </section>
+</body>
+</html>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script type="text/javascript">
+  const app = new Vue({
+    el: "#app",
+    methods: {
+      song(){
+        const se = new Audio("01.wav")
+        se.play()
+        setTimeout(() =>{
+          location.href = "https://pingu-pest.github.io/HP/"
+        },4000)
+      }
+    }
+  })
+  </script>
+</body>
+</html>
